@@ -8,16 +8,6 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log(`connection successful`);
+    console.log(`Connected to MongoDB`);
   })
   .catch((err) => console.error(err));
-
-//   mongoose
-// .connect(DB, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// })
-// .then(() => console.log(`connection successful`))
-// .catch((err) => {
-//   console.log(err);
-// });

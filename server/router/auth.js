@@ -32,8 +32,8 @@ router.post('/register', (req, res) => {
         })
 
     }).catch((err) => {
-        res.status(500).json({ msg: "email verification failed !" })
-    })
+        res.status(500).json(err)
+    });
 
 });
 
