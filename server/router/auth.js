@@ -11,8 +11,10 @@ router.get('/', (req, res) => {
 
 router.post('/register', (req, res) => {
 
+    /** Destructure the re.body to specific fields described in user Schema */
     const { name, email, phone, work, password, cpassword } = req.body ;
 
+    /** Check if any data is not been filled */
     if (!name || !email || !phone || !work || !password || !cpassword) {
         return res.status(422).json({ error: "Please Fill the form Properly...?"});
     }
