@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express();
-require('dotenv').config({ path: "./config.env" });
-require('./db/conn');
+require("dotenv").config({ path: "./config.env" });
+require("./db/conn");
 
 // const User = require('./model/userSchema'); // this is the way to use mongoose user schema
 
 app.use(express.json());
 
 // link the router files to make the routes
-app.use(require('./router/auth'));
+app.use(require("./router/auth"));
 
-const PORT=process.env.PORT;
+const PORT = process.env.PORT;
 
 // Middleware
 const middleware = (req, res, next) => {
@@ -40,7 +40,6 @@ app.get("/signin", (req, res) => {
 app.get("/signup", (req, res) => {
   res.send("<h1>Register Page</h1>");
 });
-
 
 // Listening PORT
 app.listen(PORT, () => {
