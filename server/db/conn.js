@@ -11,7 +11,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log(`Connected to daju-mernstack`);
+    console.log(`Connected to daju mernstack`);
   })
   .catch((err) => {
     console.error(err);
